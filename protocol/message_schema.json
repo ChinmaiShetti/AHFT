@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AHFT protocol v1 message",
+  "type": "object",
+  "required": ["protocol_version", "type", "id"],
+  "properties": {
+    "protocol_version": {"const": 1},
+    "type": {"enum": ["ping", "pong", "identify", "device_info", "error"]},
+    "id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "in_reply_to": {"type": "string", "minLength": 1, "maxLength": 128},
+    "payload": {"type": "object"}
+  },
+  "additionalProperties": true
+}
+

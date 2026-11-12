@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ahft"
+version = "0.1.0"
+description = "Adaptive Hardware Fuzzing Testbench host foundation"
+requires-python = ">=3.11"
+dependencies = ["pyserial>=3.5"]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["raspberry_pi"]
+addopts = "-ra"
+
+[tool.setuptools.packages.find]
+where = ["raspberry_pi"]
+

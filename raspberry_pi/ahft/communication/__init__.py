@@ -1,0 +1,2 @@
+"""Versioned serial communication foundation."""
+

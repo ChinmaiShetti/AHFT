@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+
+# Runtime data and local logs
+data/raw/*
+data/processed/*
+data/models/*
+logs/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/models/.gitkeep
+!logs/.gitkeep
+
+# ESP-IDF output
+esp32/build/
+esp32/sdkconfig
+esp32/sdkconfig.old
+managed_components/
+
+# Local configuration
+*.local.yaml
+
